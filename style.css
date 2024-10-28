@@ -241,10 +241,6 @@ nav ul li a:hover {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 
-.logo-box:hover .logos {
-    animation-play-state: paused;
-}
-
 .logos {
     display: inline-block;
     animation: 8s slide infinite linear;
@@ -323,11 +319,17 @@ footer {
     margin: 0px 5px;
 }
 
+a#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 #backToTopButton {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.6);
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -339,14 +341,52 @@ footer {
     line-height: 50px;
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-    display: none; 
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.4;
 }
 
 #backToTopButton:hover {
     background-color: #555;
+    opacity: 1;
 }
 
-body:has(#top:target) #backToTopButton {
-    display: block;
+
+
+@media (max-width: 768px) {
+    .firstSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .firstSection>div {
+        width: 80%;
+    }
+
+    .leftSection .buttons {
+        position: relative;
+        left: 28%;
+    }
+}
+
+@media (max-width: 430px) {
+    .firstSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .firstSection>div {
+        width: 90%;
+    }
+
+
+    .rightSection img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .properties {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
 }
