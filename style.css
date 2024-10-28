@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 33);
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(18, 18, 62);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+main hr {
+    border: 0;
+    height: 1.2px;
+    margin: 40px 84px;
+    background-color: rgb(173, 134, 210);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: blueviolet;
+    transform: scale(1.1);
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    padding: 15px;
+    margin-top: 5px;
+    max-width: 250px;
+    top: 100%;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+#about-content {
+    display: none;
+    position: absolute;
+    right: 428px;
+}
+
+#projects-content {
+    display: none;
+    position: absolute;
+    right: 300px;
+}
+
+#contact-content {
+    display: none;
+    position: absolute;
+    right: 190px;
+}
+
+.project-link a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.project-link a:hover {
+    color: #1f80e0;
+}
+
+.dropdown-content h3 {
+    margin-top: 0;
+}
+
+.dropdown-content p {
+    margin: 0;
+}
+
+#about-content:target,
+#contact-content:target,
+#projects-content:target {
+    display: block;
+    scroll-margin-top: 150px;
+}
+
+.left {
+    font-size: 1.5rem;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.firstSection>div {
+    width: 35%;
+}
+
+.leftSection {
+    font-size: 3rem;
+}
+
+.leftSection .btn {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    margin: 4px 4px;
+    transition: 0.3s;
+}
+
+.leftSection .btn:hover {
+    background-color: #6600c5;
+    transform: scale(1.1);
+}
+
+.rightSection img {
+    max-width: 100%;
+    height: auto;
+}
+
+.purple,
+#element {
+    color: blueviolet;
+}
+
+.secondSection {
+    max-width: 80vw;
+    margin: auto;
+    height: 180vh;
+}
+
+.gray-text {
+    color: gray;
+}
+
+.secondSection h1,
+.thirdSection h1 {
+    font-size: 1.9rem;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.outer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.image {
+    width: 500px;
+}
+
+.properties1 {
+    width: 21%;
+}
+
+.thirdSection {
+    max-width: 80vw;
+    margin: auto;
+    height: 60vh;
+}
+
+.logo-box {
+    overflow: hidden;
+    padding: 0px 0;
+    background-color: white;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logo-box:before,
+.logo-box:after {
+    position: absolute;
+    top: 0;
+
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logo-box:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logo-box:after {
+    right: 0;
+
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logo-box:hover .logos {
+    animation-play-state: paused;
+}
+
+.logos {
+    display: inline-block;
+    animation: 8s slide infinite linear;
+}
+
+.logos img {
+    height: 300px;
+    margin: 0 40px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+footer {
+    background-color: #111;
+    height: 20vh;
+    padding: 50px 0;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px, 30px, 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+#backToTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    display: none; 
+}
+
+#backToTopButton:hover {
+    background-color: #555;
+}
+
+body:has(#top:target) #backToTopButton {
+    display: block;
+}
