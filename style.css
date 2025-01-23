@@ -19,6 +19,7 @@ nav {
     align-items: center;
     height: 80px;
     background-color: rgb(18, 18, 62);
+    max-width: 100%;
 }
 
 nav ul {
@@ -51,7 +52,8 @@ nav ul li a:hover {
 }
 
 .dropdown-container {
-    position: relative;
+    position: fixed;
+    z-index: 999;
 }
 
 .dropdown-content {
@@ -65,30 +67,47 @@ nav ul li a:hover {
     border-radius: 5px;
     background-color: white;
     color: black;
+    opacity: 0.8;
 }
 
 #about-content {
     display: none;
-    position: absolute;
-    right: 428px;
+
+    position: relative;
+    left: -43%;
+
 }
 
 #projects-content {
     display: none;
-    position: absolute;
-    right: 300px;
+    position: relative;
+    right: 48%;
 }
 
 #contact-content {
     display: none;
-    position: absolute;
-    right: 190px;
+    position: relative;
+    right: 50%;
+}
+
+.project-link ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Use flexbox to arrange the links vertically */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-link li {
+    margin-bottom: 10px;
 }
 
 .project-link a {
     text-decoration: none;
     cursor: pointer;
-    color: black;
+    color: rgb(153, 0, 255);
 }
 
 .project-link a:hover {
@@ -116,7 +135,7 @@ nav ul li a:hover {
 
 .firstSection {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin: 80px 0;
 }
@@ -147,7 +166,8 @@ nav ul li a:hover {
 }
 
 .rightSection img {
-    max-width: 100%;
+    width: 125%;
+    margin: 0 -15%;
     height: auto;
 }
 
@@ -159,7 +179,8 @@ nav ul li a:hover {
 .secondSection {
     max-width: 80vw;
     margin: auto;
-    height: 180vh;
+    height: auto;
+
 }
 
 .gray-text {
@@ -198,11 +219,16 @@ nav ul li a:hover {
 }
 
 .image {
-    width: 500px;
+    width: 52%;
+    margin-left: 11%;
 }
 
-.properties1 {
+.properties {
     width: 21%;
+}
+
+.title, .desc{
+    font-size: 0.8rem;
 }
 
 .thirdSection {
@@ -223,27 +249,14 @@ nav ul li a:hover {
 .logo-box:after {
     position: absolute;
     top: 0;
-
     width: 250px;
     height: 100%;
-    content: "";
     z-index: 2;
-}
-
-.logo-box:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-
-.logo-box:after {
-    right: 0;
-
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 
 .logos {
     display: inline-block;
-    animation: 8s slide infinite linear;
+    animation: 5s slide infinite linear;
 }
 
 .logos img {
@@ -352,7 +365,7 @@ a#top {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 771px) {
     .firstSection {
         flex-direction: column;
         align-items: center;
@@ -366,22 +379,238 @@ a#top {
         position: relative;
         left: 28%;
     }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+        max-width: 100%;
+        position: relative;
+        right: -1%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+    #contact-content {
+        display: none;
+        position: relative;
+        right: 80%;
+        padding: 11px 2px;
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 13px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 0px;
+    }
+
+    .left {
+        font-size: 0.9rem;
+    }
+
+    .leftSection {
+        font-size: 1.5rem;
+    }
+
+    .rightSection img {
+        width: 127%;
+        margin: 36% 0%;
+        height: auto;
+        margin-bottom: -87px;
+        position: relative;
+        right: 22px;
+    }
+
+    .leftSection .buttons {
+        position: relative;
+        left: 18%;
+    }
+
+    .leftSection .btn {
+        font-size: 0.7rem;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 1px;
+        border: 0.1px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        margin: 0px 0px;
+        transition: 0.3s;
+    }
+
+    main hr {
+        border: 0;
+        height: 1.2px;
+        margin: 0 56px;
+        background-color: rgb(173, 134, 210);
+    }
+
+    .firstSection>div {
+        width: 50%;
+        margin-top: -70px;
+    }
+
+    .secondSection {
+        max-width: 63vw;
+        margin: auto;
+        height: auto;
+    }
+
+    .secondSection h1,
+    .thirdSection h1 {
+        font-size: 0.8rem;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+        /* padding: 0 0 0 0; */
+    }
+
+    .gray-text {
+        color: gray;
+        font-size: 0.5rem;
+    }
+
+    /* .image {
+        width: 83%;
+        margin-left: 27px;
+    } */
+
+    .top-image {
+        width: 83%;
+        margin-left: 27px;
+    }
+
+    .properties {
+        display: block;
+        width: 100%;
+        margin-top: -19px;
+    }
+
+    .title,
+    .desc {
+        font-size: 0.4rem;
+    }
+
+    .thirdSection {
+        max-width: 85vw;
+        margin: auto;
+        height: 24vh;
+    }
+
+    .logo-box:before {
+        right: 0;
+        background: linear-gradient(to left, rgba(152, 132, 177, 0), white);
+    }
+
+    .logo-box:after {
+        left: 0;
+        background: linear-gradient(to left, rgba(152, 132, 177, 0), white);
+    }
+
+    .logos img {
+        height: 152px;
+        margin: 0 40px;
+    }
+
+    footer {
+        background-color: #111;
+        height: 0vh;
+        padding: 0px 0;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 4px;
+    }
+
+    .socialIcons a i {
+        font-size: 0.9rem;
+        color: black;
+        opacity: 0.9;
+    }
+
+    .footerBottom p {
+        color: white;
+        font-size: 0.5em;
+    }
+
+    #backToTopButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(51, 51, 51, 0.6);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 0.5rem;
+        text-align: center;
+        text-decoration: none;
+        line-height: 50px;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, opacity 0.3s ease;
+        opacity: 0.4;
+    }
+
 }
 
 @media (max-width: 430px) {
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+        max-width: 100%;
+        position: relative;
+        right: -1%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        font-size: 0.71rem;
+    }
+
+    .left {
+        font-size: 0.7rem;
+    }
+
     .firstSection {
         flex-direction: column;
         align-items: center;
     }
 
     .firstSection>div {
-        width: 90%;
-    }
-
-
-    .rightSection img {
-        max-width: 100%;
-        height: auto;
+        width: 63%;
+        margin-top: -62px;
     }
 
     .properties {
@@ -389,4 +618,140 @@ a#top {
         width: 100%;
         margin-top: 10px;
     }
+
+    .leftSection {
+        font-size: 1rem;
+    }
+
+    .rightSection img {
+        width: 100%;
+        margin: 25% 0%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .leftSection .btn {
+        font-size: 0.5rem;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 3px;
+        border: 0.1px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        margin: 0px 0px;
+        transition: 0.3s;
+    }
+
+    .secondSection {
+        max-width: 63vw;
+        margin: auto;
+        height: auto;
+    }
+
+    .secondSection h1,
+    .thirdSection h1 {
+        font-size: 1rem;
+    }
+
+    .gray-text {
+        color: gray;
+        font-size: 0.7rem;
+    }
+
+    .image {
+        width: 123%;
+        margin-left: 0;
+    }
+
+    .properties {
+        display: block;
+        width: 100%;
+        margin-top: -6px;
+    }
+
+    .hr2 {
+        border: 0;
+        height: 1.2px;
+        margin: 9px 40px;
+        background-color: rgb(173, 134, 210);
+    }
+
+    main hr {
+        border: 0;
+        height: 1.2px;
+        margin: 2px 40px;
+        background-color: rgb(173, 134, 210);
+        margin-top: -85px;
+    }
+
+    .title,
+    .desc {
+        font-size: 0.6rem;
+    }
+
+    .thirdSection {
+        max-width: 85vw;
+        margin: auto;
+        height: 22vh;
+    }
+
+    .logo-box:before {
+        right: 0;
+        background: linear-gradient(to left, rgba(152, 132, 177, 0), white);
+    }
+
+    .logo-box:after {
+        left: 0;
+        background: linear-gradient(to left, rgba(152, 132, 177, 0), white);
+    }
+
+    .logos img {
+        height: 123px;
+        margin: 0 18px;
+    }
+
+    footer {
+        background-color: #111;
+        height: 0vh;
+        padding: 0px 0;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+        font-size: 0.4rem;
+    }
+
+    .socialIcons a i {
+        font-size: 0.9rem;
+        color: black;
+        opacity: 0.9;
+    }
+
+    .footerBottom p {
+        color: white;
+        font-size: 0.5em;
+    }
+
+    #backToTopButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(51, 51, 51, 0.6);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 0.5rem;
+        text-align: center;
+        text-decoration: none;
+        line-height: 50px;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, opacity 0.3s ease;
+        opacity: 0.4;
+    }
+
 }

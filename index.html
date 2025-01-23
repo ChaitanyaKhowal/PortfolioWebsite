@@ -13,6 +13,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 
 </head>
 
@@ -23,47 +24,103 @@
             <div class="left">Chaitanya's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li> <a href="/"> Home </a> </li>
-                    <li> <a href="#about-content"> About </a> </li>
+                    <li> <a href=""> Home </a> </li>
+                    <!-- <li> <a href="#about-content"> About </a> </li>
                     <li> <a href="#projects-content"> Projects </a> </li>
-                    <li> <a href="#contact-content"> Contact Me </a> </li>
+                    <li> <a href="#contact-content"> Contact Me </a> </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#about-content" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="dropdown-container">
+
+                                    <div id="about-content" class="dropdown-content">
+                                        <h3>About Me</h3>
+                                        <p>Hey there! Let me introduce myself:</p>
+                                        <p>I’m <span>Chaitanya Khowal</span>, a 23-year-old from the charming town of
+                                            Akola,
+                                            Maharashtra—a place
+                                            where the sunsets are as warm as the people.</p>
+                                        <p>Just graduated in 2024 with a B.Sc. in Computer Science, and I'm fueled by a
+                                            love for
+                                            tech and the
+                                            endless possibilities it brings. This is just the beginning, though; there’s
+                                            so much
+                                            more to
+                                            discover ahead.</p>
+                                        <p>Stick around, because there's a lot more to come. Thanks for being
+                                            here—exciting
+                                            things are on the
+                                            horizon!</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#projects-content" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="dropdown-container">
+                                    <div id="projects-content" class="dropdown-content">
+                                        <h3>My Projects</h3>
+                                        <p>Following are the projects which I made</p>
+                                        <div class="project-link">
+                                            <ul>
+                                                <li>
+                                                    <a href="https://chaitanyakhowalhotstarclone.netlify.app/">Disney
+                                                        Hotstar Clone</a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="https://chaitanya-khowal-user-emailer.up.railway.app/">UserEmailer</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#contact-content" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Contact Me
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="dropdown-container">
+                                    <div id="contact-content" class="dropdown-content">
+                                        <h3>Contact Me</h3>
+                                        <div class="socialIcons">
+                                            <a href="mailto:chaitanyakhowal8@gmail.com"><i
+                                                    class="fa-solid fa-envelope"></i></a>
+                                            <a
+                                                href="https://www.instagram.com/devil_since.2001/profilecard/?igsh=cmx2ODNhcW5yY3N5"><i
+                                                    class="fa-brands fa-instagram"></i></a>
+                                            <a href="https://www.linkedin.com/in/chaitanya-khowal-331b47272/"><i
+                                                    class="fa-brands fa-linkedin"></i></a>
+                                            <a href="https://github.com/ChaitanyaKhowal"><i
+                                                    class="fa-brands fa-github"></i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>
 
-        <div class="dropdown-container">
 
-            <div id="about-content" class="dropdown-content">
-                <h3>About Me</h3>
-                <p>Hey there! Let me introduce myself:</p>
-                <p>I’m <span>Chaitanya Khowal</span>, a 23-year-old from the charming town of Akola, Maharashtra—a place
-                    where the sunsets are as warm as the people.</p>
-                <p>Just graduated in 2024 with a B.Sc. in Computer Science, and I'm fueled by a love for tech and the
-                    endless possibilities it brings. This is just the beginning, though; there’s so much more to
-                    discover ahead.</p>
-                <p>Stick around, because there's a lot more to come. Thanks for being here—exciting things are on the
-                    horizon!</p>
-            </div>
-            <div id="projects-content" class="dropdown-content">
-                <h3>My Projects</h3>
-                <p>Following are the projects which I made</p>
-                <div class="project-link">
-                    <a href="https://chaitanyakhowalhotstarclone.netlify.app/">Disney Hotstar Clone</a>
-                </div>
-            </div>
-            <div id="contact-content" class="dropdown-content">
-                <h3>Contact Me</h3>
-                <div class="socialIcons">
-                    <a href="mailto:chaitanyakhowal8@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.instagram.com/devil_since.2001/profilecard/?igsh=cmx2ODNhcW5yY3N5"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/chaitanya-khowal-331b47272/"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/ChaitanyaKhowal"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
 
-        </div>
 
     </header>
 
@@ -76,7 +133,7 @@
                 <span id="element"></span>
 
                 <div class="buttons">
-                    <a href="https://drive.google.com/file/d/1DRGPz_2B0G4WQ4_ApkNAurzgUZR7np36/view?usp=drive_link">
+                    <a href="https://drive.google.com/file/d/1jdYy91e7np8UvJZKm9pQVGeA8vZi4XU1/view?usp=sharing">
                         <button class="btn">Download Resume</button>
                     </a>
                     <a href="https://github.com/ChaitanyaKhowal">
@@ -101,54 +158,38 @@
                     <div class="top-image">
                         <img src="SSC.png" alt="" class="image">
                     </div>
-                    <div class="properties">
-                        <div class="title">
-                            SSC
-                            <div>(2017-2018)</div>
-                        </div>
-                        <div class="desc">
-                            <div>Percentage: 76.20%</div>
-                            <div>Khandelwal English High School, Akola</div>
-                        </div>
+                    <div>
+                        <h3>SSC (2017 - 2018)</h3>
+                        <p>Percentage: 76.20%</p>
+                        <p>Khandelwal English High School, Akola</p>
                     </div>
                 </div>
                 <div class="box">
                     <div class="top-image">
                         <img src="HSC.png" alt="" class="image">
                     </div>
-                    <div class="properties">
-                        <div class="title">
-                            HSC
-                            <div>(2019-2020)</div>
-                        </div>
-                        <div class="desc">
-                            <div>Stream: General Science</div>
-                            <div>Percentage: 59.08%</div>
-                            <div>College: Shri R.L.T College of Science, Akola</div>
-                        </div>
+                    <div>
+                        <h3>HSC (2019 - 2020)</h3>
+                        <p>Stream: General Science</p>
+                        <p>Percentage: 59.08%</p>
+                        <p>College: Shri R.L.T College of Science, Akola</p>
                     </div>
                 </div>
                 <div class="box">
                     <div class="top-image">
                         <img src="Graduate.png" alt="" class="image">
                     </div>
-                    <div class="properties1">
-                        <div class="title">
-                            Graduation
-                            <div>(2020-2024)</div>
-                        </div>
-                        <div class="desc">
-                            <div>Degree: B.Sc. (Computer Science)</div>
-                            <div>Percentage: 70.30%</div>
-                            <div>College: Shankarlal Khandelwal College of Science, Commerce and Arts, Akola</div>
-                        </div>
+                    <div>
+                        <h3>Graduation (2020 - 2024)</h3>
+                        <p>Degree: B.Sc. (Computer Science)</p>
+                        <p>Percentage: 70.30%</p>
+                        <p>College: Shankarlal Khandelwal College of Science, Commerce and Arts, Akola</p>
                     </div>
                 </div>
             </div>
-
         </section>
 
-        <hr>
+        <hr class="hr2">
 
         <section class="thirdSection">
 
@@ -186,12 +227,12 @@
 
         <div class="footerContainer">
             <div class="socialIcons">
+                <a href="tel:+917620085558"><i class="fa-solid fa-phone"></i></a>
+                <a href="mailto:chaitanyakhowal8@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/chaitanya-khowal-331b47272/"><i
                         class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/ChaitanyaKhowal"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/devil_since.2001/profilecard/?igsh=cmx2ODNhcW5yY3N5"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="mailto:chaitanyakhowal8@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.instagram.com/devil_since.2001/"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
 
