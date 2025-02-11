@@ -49,7 +49,7 @@ This is my personal portfolio website, designed and developed to showcase my ski
 
 ## 📞 Contact
 - 📧 Email: [chaitanyakhowal8@gmail.com](mailto:chaitanyakhowal8@gmail.com)
-- 💼 LinkedIn: [Chaitanya Khowal](https://www.linkedin.com/in/chaitanya-khowal-331b47272/)
+- 💼 LinkedIn: [Chaitanya Khowal](https://www.linkedin.com/in/chaitanyakhowal/)
 - 🐙 GitHub: [ChaitanyaKhowal](https://github.com/ChaitanyaKhowal)
 - 📷 Instagram: [@devil_since.2001](https://www.instagram.com/devil_since.2001/)
 
