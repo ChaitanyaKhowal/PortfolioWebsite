@@ -211,6 +211,10 @@ nav ul li a:hover {
 
 .box {
     display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 10px; 
+    margin: 10px 0;
     justify-content: center;
     align-items: center;
     animation: appear linear;
@@ -218,9 +222,22 @@ nav ul li a:hover {
     animation-range: entry 0% cover 40%;
 }
 
+.top-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px; /* Restrict image container width */
+}
+
 .image {
     width: 52%;
     margin-left: 11%;
+}
+
+.box > div:not(.top-image) {
+    margin: 0; /* Remove extra margins */
+    padding: 0; /* Remove extra padding */
+    line-height: 1.5; /* Adjust line height for better spacing */
 }
 
 .properties {
